@@ -77,6 +77,9 @@ header img {
 }
 
 /* regole main */
+main{
+    display: flex;
+}
 main img {
     height: 100%; 
     border-radius: 50%;
@@ -143,4 +146,52 @@ main img {
 }
 .testo-chat p {
     color: #B6B9BB;
+}
+
+/* parte messaggi destra */
+#sfondo-chat {
+    background-image: url(../img/mine.jpg);
+    padding: 30px 60px;
+
+    /* debug */
+    width: 600px;
+    /* height: 700px; */
+}
+#sfondo-chat:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.mes-inviato, .mes-ricevuto {
+    display: inline-block;
+    max-width: 60%;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    clear: both;
+}
+/* messaggi inviati */
+.mes-inviato {
+    float: right;
+    background-color: #CCFCB3;
+}
+
+/* messaggi ricevuti */
+.mes-ricevuto {
+    float: left;
+    background-color: #FFFFFF;
+}
+
+/* parte inferiore input */
+#input {
+    background-color: #F5EEEA;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+#input input {
+    width: 75%;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
 }
