@@ -4,6 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+header img {
+    height: 100%; 
+    border-radius: 50%;
+    padding: 10px;
+}
+i {
+    margin: 0 7px;
+    color: #B1B1B1;
+    font-size: 20px;
+}
 
 /* regole selettive */
 #root {
@@ -21,8 +31,91 @@
 #container {
     background-color: white;
     width: 80vw;
-    height: 90vh;
+    height: 94vh;
     position: absolute;
     left: 10vw;
-    top: 5vh;
+    top: 3vh;
+}
+
+/* regole header */
+header {
+    display: flex;
+    background-color: #EAEAEA;
+    height: 70px;
+}
+.nome-utente {
+    display: flex;
+    width: 35%;
+    line-height: 70px;
+}
+.nome-utente > .header {
+    display: flex;
+    align-items: center;
+}
+.header.sx {
+    width: 70%;
+}
+.header.dx {
+    justify-content: right;
+    width: 30%;
+}
+.utente-inchat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    border-left: 1px solid #DDDDDD;
+}
+.parte.sx {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.parte.sx p {
+    color: #6B7578;
+}
+
+/* regole main */
+/* prima section */
+/* notifica */
+.sinistra-main {
+    width: 35%;
+}
+#notifica {
+    display: flex;
+    align-items: center;
+    background-color: #76DCFF;
+    height: 70px;
+}
+#notifica p {
+    color: #447587;
+    text-decoration: underline;
+}
+#silenzio {
+    display: flex;
+    background-color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+#silenzio > i {
+    margin: auto;
+    color: #76DCFF;
+}
+
+/* ricerca */
+#ricerca {
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    background-color: #FAFAFA;
+}
+#ricerca input {
+    width: 96%;
+    height: 35px;
+    border: 1px solid #F6F6F6;
+    border-radius: 5px;
+    padding: 0 15px;
 }
