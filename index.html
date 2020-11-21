@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
     <title>BoolzApp</title>
@@ -95,7 +97,7 @@
                     </div>
 
                     <!-- seconda chat -->
-                    <div class="multi-chat">
+                    <a href="#" class="multi-chat">
                         <!-- foto piu' nome -->
                         <div>
                             <img src="img/avatar_2.jpg" alt="">
@@ -108,6 +110,23 @@
                         <!-- data -->
                         <div class="testo-chat">
                             <p>20 11 2020 10:56:00</p>
+                        </div>
+                    </a>
+
+                    <!-- terza chat -->
+                    <div class="multi-chat selezionata">
+                        <!-- foto piu' nome -->
+                        <div>
+                            <img src="img/avatar_4.jpg" alt="">
+                            <div class="testo-chat">
+                                <h3>Luisa</h3>
+                                <p>ok...</p>
+                            </div>
+                        </div>
+
+                        <!-- data -->
+                        <div class="testo-chat">
+                            <p>20 11 2020 12:01:32</p>
                         </div>
                     </div>
                 </section>
@@ -154,7 +173,9 @@
 
                     <!-- parte inferiore input messaggio -->
                     <div id="input">
-                        <input type="search">
+                        <i class="far fa-smile"></i>
+                        <input type="search" placeholder="Scrivi un messaggio">
+                        <i class="fas fa-microphone"></i>
                     </div>
                 </section>
             </main>

@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 i {
     margin: 0 7px;
@@ -89,7 +90,9 @@ main img {
 /* prima section */
 /* notifica */
 .sinistra-main {
-    width: 35%;
+    width: 28vw;
+    height: calc(94vh - 70px);
+    overflow-y: auto;
     border-right: 1px solid #DDDDDD;
 }
 #notifica {
@@ -152,10 +155,9 @@ main img {
 #sfondo-chat {
     background-image: url(../img/mine.jpg);
     padding: 30px 60px;
-
-    /* debug */
-    width: 600px;
-    /* height: 700px; */
+    overflow-y: auto;
+    width: 52vw;
+    height: calc(94vh - 140px);
 }
 #sfondo-chat:after {
     content: '';
@@ -190,8 +192,34 @@ main img {
     text-align: center;
 }
 #input input {
-    width: 75%;
+    min-width: 75%;
     height: 50px;
     border: 0;
     border-radius: 5px;
+    padding: 15px;
+}
+#input i {
+    color: #697376;
+    margin: 0 25px;
+}
+
+
+
+
+
+
+
+
+
+
+/* classi per utilizzo esterno */
+.selezionata {
+    background-color: rgb(245, 245, 245);
+}
+
+
+
+/* debug per tag a */
+a {
+    text-decoration: none;
 }
