@@ -25,13 +25,40 @@ var app = new Vue({
                 nomeU: 'Michele',
                 ultimoM: 'ok...',
                 dataOra: '20 11 2020 10:52:03',
+                // messaggi ricevuti
+                ricevuti: [
+                    'Si, ma preferirei andare al cinema',
 
+                    'ok...'
+                ],
+                // messaggi inviati
+                inviati: [
+                    'Lo sai che ha aperto una nuova pizzeria?',
+
+                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi autem cum aut vero, beatae fugiat maxime velit tenetur officia molestiae deserunt blanditiis inventore recusandae fuga officiis soluta. Saepe, eveniet aliquid?',
+
+                    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia architecto, neque magnam exercitationem deleniti odit distinctio dicta commodi dolorum recusandae quisquam doloribus sed nostrum esse, velit fugit quae nihil et.'
+                ]
             },
             {   
                 lFoto: 'img/avatar_2.jpg',
                 nomeU: 'Fabio',
                 ultimoM: 'ok...',
-                dataOra: '20 11 2020 10:56:00'
+                dataOra: '20 11 2020 10:56:00',
+                // messaggi ricevuti
+                ricevuti: [
+                    'primo messaggio ricevuto',
+
+                    'secondo messaggio ricevuto'
+                ],
+                // messaggi inviati
+                inviati: [
+                    'primo messaggio inviato',
+
+                    'secondo messaggio inviato',
+
+                    'terzo messaggio inviato'
+                ]
             },
             {   
                 lFoto: 'img/avatar_4.jpg',
