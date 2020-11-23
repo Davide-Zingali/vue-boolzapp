@@ -115,19 +115,19 @@
                     </div>
 
                     <!-- terza chat -->
-                    <div class="multi-chat selezionata">
+                    <div class="multi-chat selezionata" @click='chatClick(0, 2)'>
                         <!-- foto piu' nome -->
                         <div>
-                            <img src="img/avatar_4.jpg" alt="">
+                            <img :src="arrayChat[2].lFoto" alt="">
                             <div class="testo-chat">
-                                <h3>Luisa</h3>
-                                <p>ok...</p>
+                                <h3>{{arrayChat[2].nomeU}}</h3>
+                                <p>{{arrayChat[2].ultimoM}}</p>
                             </div>
                         </div>
 
                         <!-- data -->
                         <div class="testo-chat">
-                            <p>20 11 2020 12:01:32</p>
+                            <p>{{arrayChat[2].dataOra}}</p>
                         </div>
                     </div>
                 </section>

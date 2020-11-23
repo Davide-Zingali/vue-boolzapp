@@ -14,8 +14,8 @@ var app = new Vue({
         arrayUinChat: [
             {
                 lFoto: 'img/avatar_4.jpg',
-                nomeU: 'Luisa....',
-                dataOra: 'Ultimo accesso oggi 20 11 2020 12:01:32....'
+                nomeU: 'Luisa',
+                dataOra: 'Ultimo accesso: 20 11 2020 12:01:32'
             }
         ],
         // array chat sinistra-main
@@ -24,7 +24,8 @@ var app = new Vue({
                 lFoto: 'img/avatar_1.jpg',
                 nomeU: 'Michele',
                 ultimoM: 'ok...',
-                dataOra: '20 11 2020 10:52:03'
+                dataOra: '20 11 2020 10:52:03',
+
             },
             {   
                 lFoto: 'img/avatar_2.jpg',
@@ -41,8 +42,7 @@ var app = new Vue({
         ],
         arrayMes: [
             {}
-        ],
-
+        ]
     },
     methods: {
         chatClick(uno, due) {
