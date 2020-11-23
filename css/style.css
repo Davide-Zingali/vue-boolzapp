@@ -216,10 +216,6 @@ main img {
 .selezionata {
     background-color: rgb(245, 245, 245);
 }
-
-
-
-/* debug per tag a */
-a {
-    text-decoration: none;
+.nascosto {
+    display: none;
 }

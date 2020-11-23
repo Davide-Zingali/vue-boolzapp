@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>BoolzApp</title>
 </head>
 <body>
@@ -40,10 +41,10 @@
                 <div class="utente-inchat">
                     <!-- parte di sx -->
                     <div class="parte sx">
-                        <img src="img/avatar_4.jpg" alt="">
+                        <img :src="arrayUinChat[0].lFoto" alt="">
                         <div>
-                            <h3>Luisa</h3>
-                            <p>Ultimo accesso oggi...</p>
+                            <h3>{{arrayUinChat[0].nomeU}}</h3>
+                            <p>{{arrayUinChat[0].dataOra}}</p>
                         </div>
                     </div>
 
@@ -80,38 +81,38 @@
 
                     <!-- parte delle chat -->
                     <!-- prima chat -->
-                    <div class="multi-chat">
+                    <div class="multi-chat" @click='chatClick(0, 0)'>
                         <!-- foto piu' nome -->
                         <div>
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="arrayChat[0].lFoto" alt="">
                             <div class="testo-chat">
-                                <h3>Michele</h3>
-                                <p>ok...</p>
+                                <h3>{{arrayChat[0].nomeU}}</h3>
+                                <p>{{arrayChat[0].ultimoM}}</p>
                             </div>
                         </div>
 
                         <!-- data -->
                         <div class="testo-chat">
-                            <p>20 11 2020 10:52:03</p>
+                            <p>{{arrayChat[0].dataOra}}</p>
                         </div>
                     </div>
 
                     <!-- seconda chat -->
-                    <a href="#" class="multi-chat">
+                    <div class="multi-chat" @click='chatClick(0, 1)'>
                         <!-- foto piu' nome -->
                         <div>
-                            <img src="img/avatar_2.jpg" alt="">
+                            <img :src="arrayChat[1].lFoto" alt="">
                             <div class="testo-chat">
-                                <h3>Fabio</h3>
-                                <p>ok...</p>
+                                <h3>{{arrayChat[1].nomeU}}</h3>
+                                <p>{{arrayChat[1].ultimoM}}</p>
                             </div>
                         </div>
 
                         <!-- data -->
                         <div class="testo-chat">
-                            <p>20 11 2020 10:56:00</p>
+                            <p>{{arrayChat[1].dataOra}}</p>
                         </div>
-                    </a>
+                    </div>
 
                     <!-- terza chat -->
                     <div class="multi-chat selezionata">
