@@ -80,54 +80,20 @@
                     </div>
 
                     <!-- parte delle chat -->
-                    <!-- prima chat -->
-                    <div class="multi-chat" @click='chatClick(0, 0)'>
+                    <!-- zero chat -->
+                    <div class="multi-chat" v-bind:class='classeSel' @click='chatClick(0, index)' v-for='(item, index) in arrayChat'>
                         <!-- foto piu' nome -->
                         <div>
-                            <img :src="arrayChat[0].lFoto" alt="">
+                            <img :src="item.lFoto" alt="">
                             <div class="testo-chat">
-                                <h3>{{arrayChat[0].nomeU}}</h3>
-                                <p>{{arrayChat[0].ultimoM}}</p>
+                                <h3>{{item.nomeU}}</h3>
+                                <p>{{item.ultimoM}}</p>
                             </div>
                         </div>
 
                         <!-- data -->
                         <div class="testo-chat">
-                            <p>{{arrayChat[0].dataOra}}</p>
-                        </div>
-                    </div>
-
-                    <!-- seconda chat -->
-                    <div class="multi-chat" @click='chatClick(0, 1)'>
-                        <!-- foto piu' nome -->
-                        <div>
-                            <img :src="arrayChat[1].lFoto" alt="">
-                            <div class="testo-chat">
-                                <h3>{{arrayChat[1].nomeU}}</h3>
-                                <p>{{arrayChat[1].ultimoM}}</p>
-                            </div>
-                        </div>
-
-                        <!-- data -->
-                        <div class="testo-chat">
-                            <p>{{arrayChat[1].dataOra}}</p>
-                        </div>
-                    </div>
-
-                    <!-- terza chat -->
-                    <div class="multi-chat selezionata" @click='chatClick(0, 2)'>
-                        <!-- foto piu' nome -->
-                        <div>
-                            <img :src="arrayChat[2].lFoto" alt="">
-                            <div class="testo-chat">
-                                <h3>{{arrayChat[2].nomeU}}</h3>
-                                <p>{{arrayChat[2].ultimoM}}</p>
-                            </div>
-                        </div>
-
-                        <!-- data -->
-                        <div class="testo-chat">
-                            <p>{{arrayChat[2].dataOra}}</p>
+                            <p>{{item.dataOra}}</p>
                         </div>
                     </div>
                 </section>
@@ -136,29 +102,16 @@
                 <section class="destra-main">
                     <!-- parte della chatt -->
                     <div id="sfondo-chat">
-                        <!-- messaggio inviato dx -->
-                        <div class="mes-inviato">
-                            {{arrayChat[0].inviati[0]}}
-                        </div>
-                        
-                        <!-- messaggi ricevuti sx -->
-                        <div class="mes-ricevuto">
-                            {{arrayChat[0].ricevuti[0]}}
-                        </div>
-                        
-                        <!-- messaggio inviato dx -->
-                        <div class="mes-inviato">
-                            {{arrayChat[0].inviati[1]}}
-                        </div>
-                        
-                        <!-- messaggio inviato dx -->
-                        <div class="mes-inviato">
-                            {{arrayChat[0].inviati[2]}}
-                        </div>
-                        
-                        <!-- messaggi ricevuti sx -->
-                        <div class="mes-ricevuto">
-                            {{arrayChat[0].ricevuti[1]}}
+                        <div v-for='(messaggio, indice) in arrayChat[chatSelezionata].messaggi'>
+                            <!-- messaggio inviato dx -->
+                            <div class="mes-inviato">
+                                {{messaggio}}
+                            </div>
+                            
+                            <!-- messaggi ricevuti sx -->
+                            <div class="mes-ricevuto">
+                                
+                            </div>
                         </div>
                     </div>
 

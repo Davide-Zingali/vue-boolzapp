@@ -10,6 +10,9 @@
 var app = new Vue({
     el: '#root',
     data: {
+        // chat cliccata
+        chatSelezionata: 0,
+        classeSel: '',
         // utente-inchat parte fissa in alto a dx
         arrayUinChat: [
             {
@@ -23,21 +26,18 @@ var app = new Vue({
             {
                 lFoto: 'img/avatar_1.jpg',
                 nomeU: 'Michele',
-                ultimoM: 'ok...',
+                ultimoM: 'test ok...',
                 dataOra: '20 11 2020 10:52:03',
-                // messaggi ricevuti
-                ricevuti: [
-                    'Si, ma preferirei andare al cinema',
-
-                    'ok...'
-                ],
-                // messaggi inviati
-                inviati: [
+                messaggi: [
                     'Lo sai che ha aperto una nuova pizzeria?',
+
+                    'Si, ma preferirei andare al cinema',
 
                     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi autem cum aut vero, beatae fugiat maxime velit tenetur officia molestiae deserunt blanditiis inventore recusandae fuga officiis soluta. Saepe, eveniet aliquid?',
 
-                    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia architecto, neque magnam exercitationem deleniti odit distinctio dicta commodi dolorum recusandae quisquam doloribus sed nostrum esse, velit fugit quae nihil et.'
+                    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia architecto, neque magnam exercitationem deleniti odit distinctio dicta commodi dolorum recusandae quisquam doloribus sed nostrum esse, velit fugit quae nihil et.',
+
+                    'ok...'
                 ]
             },
             {   
@@ -45,15 +45,12 @@ var app = new Vue({
                 nomeU: 'Fabio',
                 ultimoM: 'ok...',
                 dataOra: '20 11 2020 10:56:00',
-                // messaggi ricevuti
-                ricevuti: [
+                messaggi: [
                     'primo messaggio ricevuto',
 
-                    'secondo messaggio ricevuto'
-                ],
-                // messaggi inviati
-                inviati: [
                     'primo messaggio inviato',
+
+                    'secondo messaggio ricevuto',
 
                     'secondo messaggio inviato',
 
@@ -64,18 +61,34 @@ var app = new Vue({
                 lFoto: 'img/avatar_4.jpg',
                 nomeU: 'Luisa',
                 ultimoM: 'ok...',
-                dataOra: '20 11 2020 12:01:32'
+                dataOra: '20 11 2020 12:01:32',
+                messaggi: [
+                    'altro primo messaggio ricevuto',
+
+                    'altro primo messaggio inviato',
+
+                    'altro secondo messaggio ricevuto',
+
+                    'altro secondo messaggio inviato',
+
+                    'altro terzo messaggio inviato'
+                ]
             }
-        ],
-        arrayMes: [
-            {}
         ]
     },
     methods: {
-        chatClick(uno, due) {
-            this.arrayUinChat[uno].lFoto = this.arrayChat[due].lFoto;
-            this.arrayUinChat[uno].nomeU = this.arrayChat[due].nomeU;
-            this.arrayUinChat[uno].dataOra = 'Ultimo accesso: ' + this.arrayChat[due].dataOra;
+        chatClick(uno, index) {
+            this.arrayUinChat[uno].lFoto = this.arrayChat[index].lFoto;
+            this.arrayUinChat[uno].nomeU = this.arrayChat[index].nomeU;
+            this.arrayUinChat[uno].dataOra = 'Ultimo accesso: ' + this.arrayChat[index].dataOra;
+
+            // chat cliccata che aggiorna la variabile chatSelezionata
+            this.chatSelezionata = index;
+            console.log(this.chatSelezionata);
+
+            if (this.arrayChat[this.chatSelezionata]) {
+                this.classeSel = 'selezionata'
+            }
         }
     }
 })
