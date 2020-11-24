@@ -123,8 +123,12 @@ var app = new Vue({
             this.chatSelezionata = index;
         },
         addEnter() {
-            this.arrayChat[this.chatSelezionata].messaggi.push(this.newObj);
-            this.newObj.mes = this.inputChat;
+            this.arrayChat[this.chatSelezionata].messaggi.push(
+                {
+                    mes:this.inputChat, 
+                    stato: 'inviato'
+                }
+            );
 
         }
     }
