@@ -10,6 +10,11 @@
 var app = new Vue({
     el: '#root',
     data: {
+        newObj: {
+            mes:'qui va inputchat', 
+            stato: 'inviato'
+        },
+        inputChat: '',
         // chat cliccata
         chatSelezionata: 0,
         // utente-inchat parte fissa in alto a dx
@@ -25,7 +30,7 @@ var app = new Vue({
             {
                 lFoto: 'img/avatar_1.jpg',
                 nomeU: 'Michele',
-                ultimoM: 'test ok...',
+                ultimoM: 'ok...',
                 dataOra: '20 11 2020 10:52:03',
                 messaggi: [
                     {
@@ -116,6 +121,11 @@ var app = new Vue({
 
             // chat cliccata che aggiorna la variabile chatSelezionata
             this.chatSelezionata = index;
+        },
+        addEnter() {
+            this.arrayChat[this.chatSelezionata].messaggi.push(this.newObj);
+            this.newObj.mes = this.inputChat;
+
         }
     }
 })

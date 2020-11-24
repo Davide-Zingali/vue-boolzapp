@@ -113,7 +113,7 @@
                     <!-- parte inferiore input messaggio -->
                     <div id="input">
                         <i class="far fa-smile"></i>
-                        <input type="search" placeholder="Scrivi un messaggio">
+                        <input type="search" v-model='inputChat' placeholder="Scrivi un messaggio" @keyup.enter='addEnter'>
                         <i class="fas fa-microphone"></i>
                     </div>
                 </section>
