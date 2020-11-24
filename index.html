@@ -81,7 +81,7 @@
 
                     <!-- parte delle chat -->
                     <!-- zero chat -->
-                    <div class="multi-chat" v-bind:class='classeSel' @click='chatClick(0, index)' v-for='(item, index) in arrayChat'>
+                    <div class="multi-chat" @click='chatClick(0, index)' v-for='(item, index) in arrayChat' :class="(index === chatSelezionata ? 'selezionata' : '')">
                         <!-- foto piu' nome -->
                         <div>
                             <img :src="item.lFoto" alt="">

@@ -12,10 +12,9 @@ var app = new Vue({
     data: {
         // chat cliccata
         chatSelezionata: 0,
-        classeSel: '',
         // utente-inchat parte fissa in alto a dx
         arrayUinChat: [
-            {
+            {   
                 lFoto: 'img/avatar_1.jpg',
                 nomeU: 'Michele',
                 dataOra: 'Ultimo accesso: 20 11 2020 10:52:03'
@@ -117,20 +116,9 @@ var app = new Vue({
 
             // chat cliccata che aggiorna la variabile chatSelezionata
             this.chatSelezionata = index;
-            console.log(this.chatSelezionata);
         }
     }
 })
-
-
-
-
-
-
-
-
-
-
 
 
 // NOTE

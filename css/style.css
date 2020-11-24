@@ -203,19 +203,7 @@ main img {
     margin: 0 25px;
 }
 
-
-
-
-
-
-
-
-
-
 /* classi per utilizzo esterno */
 .selezionata {
     background-color: rgb(245, 245, 245);
-}
-.nascosto {
-    display: none;
 }
