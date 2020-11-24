@@ -164,7 +164,7 @@ main img {
     display: table;
     clear: both;
 }
-.mes-inviato, .mes-ricevuto {
+.inviato, .ricevuto {
     display: inline-block;
     max-width: 60%;
     padding: 15px;
@@ -173,13 +173,13 @@ main img {
     clear: both;
 }
 /* messaggi inviati */
-.mes-inviato {
+.inviato {
     float: right;
     background-color: #CCFCB3;
 }
 
 /* messaggi ricevuti */
-.mes-ricevuto {
+.ricevuto {
     float: left;
     background-color: #FFFFFF;
 }

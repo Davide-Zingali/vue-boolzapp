@@ -103,14 +103,9 @@
                     <!-- parte della chatt -->
                     <div id="sfondo-chat">
                         <div v-for='(messaggio, indice) in arrayChat[chatSelezionata].messaggi'>
-                            <!-- messaggio inviato dx -->
-                            <div class="mes-inviato">
-                                {{messaggio}}
-                            </div>
-                            
-                            <!-- messaggi ricevuti sx -->
-                            <div class="mes-ricevuto">
-                                
+                            <!-- messaggio inviato e ricevuti -->
+                            <div v-bind:class='messaggio.stato'>
+                                {{messaggio.mes}}
                             </div>
                         </div>
                     </div>

@@ -16,9 +16,9 @@ var app = new Vue({
         // utente-inchat parte fissa in alto a dx
         arrayUinChat: [
             {
-                lFoto: 'img/avatar_4.jpg',
-                nomeU: 'Luisa',
-                dataOra: 'Ultimo accesso: 20 11 2020 12:01:32'
+                lFoto: 'img/avatar_1.jpg',
+                nomeU: 'Michele',
+                dataOra: 'Ultimo accesso: 20 11 2020 10:52:03'
             }
         ],
         // array chat sinistra-main
@@ -29,15 +29,26 @@ var app = new Vue({
                 ultimoM: 'test ok...',
                 dataOra: '20 11 2020 10:52:03',
                 messaggi: [
-                    'Lo sai che ha aperto una nuova pizzeria?',
-
-                    'Si, ma preferirei andare al cinema',
-
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi autem cum aut vero, beatae fugiat maxime velit tenetur officia molestiae deserunt blanditiis inventore recusandae fuga officiis soluta. Saepe, eveniet aliquid?',
-
-                    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia architecto, neque magnam exercitationem deleniti odit distinctio dicta commodi dolorum recusandae quisquam doloribus sed nostrum esse, velit fugit quae nihil et.',
-
-                    'ok...'
+                    {
+                        mes:'Lo sai che ha aperto una nuova pizzeria?', 
+                        stato: 'ricevuto'
+                    },
+                    {
+                        mes:'Si, ma preferirei andare al cinema', 
+                        stato: 'inviato'
+                    },
+                    {
+                        mes:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi autem cum aut vero, beatae fugiat maxime velit tenetur officia molestiae deserunt blanditiis inventore recusandae fuga officiis soluta. Saepe, eveniet aliquid?', 
+                        stato: 'ricevuto'
+                    },
+                    {
+                        mes:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia architecto, neque magnam exercitationem deleniti odit distinctio dicta commodi dolorum recusandae quisquam doloribus sed nostrum esse, velit fugit quae nihil et.', 
+                        stato: 'ricevuto'
+                    },
+                    {
+                        mes:'ok...', 
+                        stato: 'inviato'
+                    }
                 ]
             },
             {   
@@ -46,15 +57,26 @@ var app = new Vue({
                 ultimoM: 'ok...',
                 dataOra: '20 11 2020 10:56:00',
                 messaggi: [
-                    'primo messaggio ricevuto',
-
-                    'primo messaggio inviato',
-
-                    'secondo messaggio ricevuto',
-
-                    'secondo messaggio inviato',
-
-                    'terzo messaggio inviato'
+                    {
+                        mes:'primo messaggio ricevuto', 
+                        stato: 'ricevuto'
+                    },
+                    {
+                        mes:'primo messaggio inviato', 
+                        stato: 'inviato'
+                    },
+                    {
+                        mes:'secondo messaggio ricevuto', 
+                        stato: 'ricevuto'
+                    },
+                    {
+                        mes:'secondo messaggio inviato', 
+                        stato: 'inviato'
+                    },
+                    {
+                        mes:'terzo messaggio inviato', 
+                        stato: 'inviato'
+                    }
                 ]
             },
             {   
@@ -63,15 +85,26 @@ var app = new Vue({
                 ultimoM: 'ok...',
                 dataOra: '20 11 2020 12:01:32',
                 messaggi: [
-                    'altro primo messaggio ricevuto',
-
-                    'altro primo messaggio inviato',
-
-                    'altro secondo messaggio ricevuto',
-
-                    'altro secondo messaggio inviato',
-
-                    'altro terzo messaggio inviato'
+                    {
+                        mes:'altro primo messaggio ricevuto', 
+                        stato: 'ricevuto'
+                    },
+                    {
+                        mes:'altro primo messaggio inviato', 
+                        stato: 'inviato'
+                    },
+                    {
+                        mes:'altro secondo messaggio ricevuto', 
+                        stato: 'ricevuto'
+                    },
+                    {
+                        mes:'altro secondo messaggio inviato', 
+                        stato: 'inviato'
+                    },
+                    {
+                        mes:'altro terzo messaggio inviato', 
+                        stato: 'inviato'
+                    }
                 ]
             }
         ]
@@ -85,10 +118,6 @@ var app = new Vue({
             // chat cliccata che aggiorna la variabile chatSelezionata
             this.chatSelezionata = index;
             console.log(this.chatSelezionata);
-
-            if (this.arrayChat[this.chatSelezionata]) {
-                this.classeSel = 'selezionata'
-            }
         }
     }
 })
