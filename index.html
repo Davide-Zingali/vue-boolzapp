@@ -75,7 +75,7 @@
                     <!-- cerca una nuova chat -->
                     <div id="ricerca">
                         <form action="">
-                            <input type="search" placeholder="Cerca o inizia una nuova chat">
+                            <input type="search" placeholder="Cerca o inizia una nuova chat" v-model='filtro' @keyup.space='filtrare(item)'>
                         </form>
                     </div>
 

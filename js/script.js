@@ -10,6 +10,7 @@
 var app = new Vue({
     el: '#root',
     data: {
+        filtro: '',
         newObj: {
             mes:'qui va inputchat', 
             stato: 'inviato'
@@ -140,6 +141,9 @@ var app = new Vue({
                     }
                 );
             }, 1000);
+        },
+        filtrare(item) {
+            console.log(item);
         }
     }
 })
