@@ -129,8 +129,17 @@ var app = new Vue({
                     stato: 'inviato'
                 }
             );
-            // avvero il v-model
+            // azzero il v-model
             this.inputChat = '';
+            // risposta automatica
+            setTimeout(() => {
+                this.arrayChat[this.chatSelezionata].messaggi.push(
+                    {
+                        mes:'Riprovaci...', 
+                        stato: 'ricevuto'
+                    }
+                );
+            }, 1000);
         }
     }
 })
