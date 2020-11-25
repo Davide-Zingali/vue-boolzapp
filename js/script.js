@@ -129,6 +129,8 @@ var app = new Vue({
                     stato: 'inviato'
                 }
             );
+            // avvero il v-model
+            this.inputChat = '';
         }
     }
 })
