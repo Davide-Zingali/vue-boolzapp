@@ -129,7 +129,6 @@ var app = new Vue({
                     stato: 'inviato'
                 }
             );
-
         }
     }
 })
