@@ -75,13 +75,13 @@
                     <!-- cerca una nuova chat -->
                     <div id="ricerca">
                         <form action="">
-                            <input type="search" placeholder="Cerca o inizia una nuova chat" v-model='filtro' @keyup.space='filtrare(item)'>
+                            <input type="search" placeholder="Cerca o inizia una nuova chat" v-model='filtro' @keyup.space='filtrare()'>
                         </form>
                     </div>
 
                     <!-- parte delle chat -->
-                    <!-- zero chat -->
-                    <div class="multi-chat" @click='chatClick(0, index)' v-for='(item, index) in arrayChat' :class="(index === chatSelezionata ? 'selezionata' : '')">
+                    <!-- chat sx -->
+                    <div class="multi-chat" @click='chatClick(0, index)' v-for='(item, index) in arrayChat' :class="(index === chatSelezionata ? 'selezionata' : '')" v-if='item.nomeU.toLowerCase().includes(filtro)'>
                         <!-- foto piu' nome -->
                         <div>
                             <img :src="item.lFoto" alt="">
